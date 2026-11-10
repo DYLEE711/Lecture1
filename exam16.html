@@ -17,9 +17,19 @@
     <script>
         $(document).ready(function(){
             $('.num').click(function(){
+                let cur = $('#disp2').val();
               let n = $(this).val();
             $('#disp2').val(cur+n);
         });
+            $('.op').click(function(){
+                let cur = $('#disp2').val();
+                let opt = $(this).val();
+                if( opt !="=") {
+                $('disp2').val(cur+opt);
+            }
+                           else {
+
+            }
     </script>
 <body>
   <h1>계산기</h1>
@@ -39,4 +49,11 @@
     <input type="button" class="num" value="1">
     <input type="button" class="num" value="2">
     <input type="button" class="num" value="3">
+    <input type = "button" class = "op" value = "*" ><br>
+    <input type = "button" class = "btn-clear" id = "clear" value = "C" >
+    <input type = "button" class = "num" value = "0" >
+    <input type = "button" class = "btn-calc" id = "calc-btn" value = "=" >
+    <input type = "button" class = "op" value = "/" >
+  </div>
 </body>
+</html>
