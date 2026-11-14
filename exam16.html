@@ -45,7 +45,25 @@
         } 
         else {
             $('#disp1').val(cur);
-            $('#disp2').val(eval(cur));
+
+            let result = 0;
+            let tokens =cur.split(/([\+\-\*\/])/);
+
+            if (tokens.length >=3) {
+                let n1= Number(tokens[0]);
+                let op = tokens[1];
+                let n2 = Number(tokens[2]);
+
+                if(op === '+') {
+                    result = n1+n2;
+                } else if (op === '-')
+                result = n1-n2;
+            } else if (op === '*') {
+                result = n1*n2;
+            } else if (op === '/') {
+                result = n1/n2;
+            }
+            $('#disp2').val(result);
         }
     });
 
@@ -54,6 +72,7 @@
         $('#disp2').val('');
     });
 });
+
     </script>
 <body>
   <h1>계산기</h1>
