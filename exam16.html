@@ -45,7 +45,7 @@
             } else {
                 $('#disp1').val(cur);
                 let result = 0;
-                let tokens = cur.split(/([\+\-\*\/])/);
+                let tokens = cur.split(/([\+\-\*\/\])/);
                 if (tokens.length >= 3) {
                     let n1 = Number(tokens[0]);
                     let op = tokens[1];
