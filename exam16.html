@@ -42,9 +42,10 @@
         let opt = $(this).val();
         if (opt != "=") {
             $('#disp2').val(cur + opt);
-        } else {
+        } 
+        else {
             $('#disp1').val(cur);
-            $('#disp2').val(eval(cur));
+            //('#disp2').val(eval(cur));
         }
     });
 
